@@ -42,17 +42,17 @@ class Main extends P implements L {
 	
 	public function GM0($player){
 		$player->setGamemode(0);
-		$player->sendMessage(TF::GREEN . "Du bist nun im GameMode 0");
+		$player->sendMessage(TF::GREEN . "§b§lSystem §r§7» Du bist nun im GameMode 0");
 	}
 	
 	public function GM1($player){
 		$player->setGamemode(1);
-		$player->sendMessage(TF::GREEN . "Du bist nun im GameMode 1");
+		$player->sendMessage(TF::GREEN . "§b§lSystem §r§7» Du bist nun im GameMode 1");
 	}
 	
 	public function GM3($player){
 		$player->setGamemode(3);
-		$player->sendMessage(TF::GREEN . "Du bist nun im GameMode 3");
+		$player->sendMessage(TF::GREEN . "§b§lSystem §r§7» Du bist nun im GameMode 3");
 	}
 	
 	public function OpenUI($player){
@@ -78,9 +78,9 @@ class Main extends P implements L {
 		});
 		$form->setTitle("§a§lGameMode");
 		$form->setContent("§6Wähle dein gewünschten GameMode aus:");
-		$form->addButton("§cÜberleben\n GM0");
-		$form->addButton("§9Kreativ\n GM1");
-		$form->addButton("§aZuschauer\n GM3");
+		$form->addButton("§cÜberleben\n GameMode 0");
+		$form->addButton("§9Kreativ\n GameMode 1");
+		$form->addButton("§aZuschauer\n Gamemode 3");
 		$form->sendToPlayer($player);
 		return $form;
 	 }
