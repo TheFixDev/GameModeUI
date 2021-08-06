@@ -49,6 +49,10 @@ class Main extends P implements L {
 		$player->setGamemode(1);
 		$player->sendMessage(TF::GREEN . "§b§lSystem §r§7» Du bist nun im GameMode 1");
 	}
+	public function GM2($player){
+		$player->setGamemode(2);
+		$player->sendMessage(TF::GREEN . "§b§lSystem §r§7» Du bist nun im GameMode 2");
+	}
 	
 	public function GM3($player){
 		$player->setGamemode(3);
@@ -72,6 +76,10 @@ class Main extends P implements L {
 				break;
 				
 				case 2:
+					$this->GM2($player);
+				break;
+				
+				case 3:
 					$this->GM3($player);
 				break;
 				}
@@ -80,7 +88,8 @@ class Main extends P implements L {
 		$form->setContent("§6Wähle dein gewünschten GameMode aus:");
 		$form->addButton("§cÜberleben\n GameMode 0");
 		$form->addButton("§9Kreativ\n GameMode 1");
-		$form->addButton("§aZuschauer\n Gamemode 3");
+    $form->addButton("§eAbenteuer\n GameMode 2");
+		$form->addButton("§aZuschauer\n GameMode 3");
 		$form->sendToPlayer($player);
 		return $form;
 	 }
