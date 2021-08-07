@@ -42,12 +42,12 @@ class Main extends P implements L {
 	
 	public function GM0($player){
 		$player->setGamemode(0);
-		$player->sendMessage(TF::GREEN . "§b§lSystem §r§7» Du bist nun im GameMode 0");
+		$player->sendMessage(TF::GREEN . "§b§lSystem §r§7» §aDu bist nun im GameMode 0");
 	}
 	
 	public function GM1($player){
 		$player->setGamemode(1);
-		$player->sendMessage(TF::GREEN . "§b§lSystem §r§7» Du bist nun im GameMode 1");
+		$player->sendMessage(TF::GREEN . "§b§lSystem §r§7» §aDu bist nun im GameMode 1");
 	}
 	public function GM2($player){
 		$player->setGamemode(2);
@@ -56,7 +56,7 @@ class Main extends P implements L {
 	
 	public function GM3($player){
 		$player->setGamemode(3);
-		$player->sendMessage(TF::GREEN . "§b§lSystem §r§7» Du bist nun im GameMode 3");
+		$player->sendMessage(TF::GREEN . "§b§lSystem §r§7» §aDu bist nun im GameMode 3");
 	}
 	
 	public function OpenUI($player){
