@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace GameMode;
+namespace GameModeUI;
 
 use pocketmine\plugin\PluginBase as P;
 use pocketmine\event\Listener as L;
