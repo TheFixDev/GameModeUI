@@ -18,17 +18,7 @@ use pocketmine\item\Item;
 use pocketmine\inventory\Inventory;
 
 class Main extends P implements L {
-	
-	public function onEnable() : void{
-		$this->getLogger()->notice(base64_decode("VGhlIFBsdWdpbiBDcmVhdGUgQnkgTGFpdGhZb3V0dWJlciBDb3B5cmlnaHQgMjAxOSBMYWl0aFlU"));
-		$this->getLogger()->info(" Aktiviert ");
-		$this->getLogger()->info(" GameModeUI Aktiviert ");
-	}
-	
-	public function onDisable() {
-		$this->getLogger()->info(" GameModdUI Deaktiviert ");
-	}
-	
+
 	public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args) : bool{
 		switch($cmd->getName()){
 			case "gm":
@@ -42,21 +32,21 @@ class Main extends P implements L {
 	
 	public function GM0($player){
 		$player->setGamemode(0);
-		$player->sendMessage(TF::GREEN . "§b§lSystem §r§7» §aDu bist nun im GameMode 0");
+		$player->sendMessage(TF::GREEN . "§b§lSystem §r§7» You are now in GameMode 0");
 	}
 	
 	public function GM1($player){
 		$player->setGamemode(1);
-		$player->sendMessage(TF::GREEN . "§b§lSystem §r§7» §aDu bist nun im GameMode 1");
+		$player->sendMessage(TF::GREEN . "§b§lSystem §r§7» You are now in GameMode1");
 	}
 	public function GM2($player){
 		$player->setGamemode(2);
-		$player->sendMessage(TF::GREEN . "§b§lSystem §r§7» Du bist nun im GameMode 2");
+		$player->sendMessage(TF::GREEN . "§b§lSystem §r§7» You are now in GameMode 2");
 	}
 	
 	public function GM3($player){
 		$player->setGamemode(3);
-		$player->sendMessage(TF::GREEN . "§b§lSystem §r§7» §aDu bist nun im GameMode 3");
+		$player->sendMessage(TF::GREEN . "§b§lSystem §r§7» You are now in GameMode 3");
 	}
 	
 	public function OpenUI($player){
@@ -84,12 +74,12 @@ class Main extends P implements L {
 				break;
 				}
 		});
-		$form->setTitle("§a§lGameMode");
-		$form->setContent("§6Wähle dein gewünschten GameMode aus:");
-		$form->addButton("§cÜberleben\n GameMode 0");
-		$form->addButton("§9Kreativ\n GameMode 1");
-    $form->addButton("§eAbenteuer\n GameMode 2");
-		$form->addButton("§aZuschauer\n GameMode 3");
+		$form->setTitle("§a§lGameModeUI");
+		$form->setContent("§6Select your GameMode:");
+		$form->addButton("§cSurival\n GameMode 0");
+		$form->addButton("§9Creative\n GameMode 1");
+               $form->addButton("§eAdventure\n GameMode 2");
+		$form->addButton("§aSpectator\n GameMode 3");
 		$form->sendToPlayer($player);
 		return $form;
 	 }
