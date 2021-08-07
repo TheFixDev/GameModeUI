@@ -1,2 +1,2 @@
 # GameModeUI
-GameModeUI for Pocketmine German Plugin
+GameModeUI for Pocketmine-MP
